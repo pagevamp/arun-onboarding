@@ -1,5 +1,5 @@
 import 'popper.js';
-// import 'bootstrap/js/dist/button';
+import 'bootstrap/js/dist/offcanvas';
 import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/dropdown';
 // import 'bootstrap/js/dist/modal';
@@ -38,10 +38,10 @@ class global {
         var toggleBar = $('.navbar-toggle');
         var popupMenu = $('.megamenu-popup');
         var closePopup = $('.close-menu');
-        $(toggleBar).click(function () {
+        $(toggleBar).on("click", function () {
             $(popupMenu).addClass('active');
         });
-        $(closePopup).click(function () {
+        $(closePopup).on("click", function () {
             $(popupMenu).removeClass('active');
         });
     }
@@ -49,14 +49,14 @@ class global {
     toggleContent() {
         var toggleContent = $('.toggle-text');
         var viewBtn = $('.toggleRead');
-        $(viewBtn).click(function () {
+        $(viewBtn).on("click", function () {
             $(this).toggleClass('active');
             $(toggleContent).toggleClass('active');
         });
     }
 
     readMore() {
-        $('.readmore').click(function () {
+        $('.readmore').on("click", function () {
             $('.collapse-text').addClass('expand');
             $(this).hide();
         });

@@ -1,3 +1,23 @@
+// adding font weight medium extending utilities
+$utilities: map-merge(
+    $utilities,
+    (
+        'font-weight':
+            map-merge(
+                map-get($utilities, 'font-weight'),
+                (
+                    values:
+                        map-merge(
+                            map-get(map-get($utilities, 'font-weight'), 'values'),
+                            (
+                                medium: $font-weight-medium,
+                            )
+                        ),
+                )
+            ),
+    )
+);
+
 h1,
 h2,
 h3,
@@ -9,107 +29,144 @@ h6,
 .h3,
 .h4 {
     @extend %heading;
+    color: $black-blue;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0;
 }
 
 h1,
 .h1,
 .display-1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: rem(40px);
+    line-height: rem(60px);
+    letter-spacing: .01em;
 
-    @include media-breakpoint-up(xl) {
-        font-size: 6.4rem;
-        line-height: 6.4rem;
+    @include media-breakpoint-up(md) {
+        font-size: rem(62px);
+        line-height: 126%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(72px);
+        line-height: 128%;
     }
 }
 
 h2,
 .h2 {
-    font-size: 2.8rem;
-    line-height: 2.8rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 4.4rem;
-        line-height: 4.4rem;
+    font-size: rem(36px);
+    line-height: normal;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(40px);
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(62px);
+        line-height: 126%;
     }
 }
 
 h3,
 .h3 {
-    font-size: 2.6rem;
-    line-height: 2.6rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 3.6rem;
-        line-height: 3.6rem;
+    line-height: normal;
+    font-size: rem(32px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(36px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(40px);
     }
 }
 
 h4,
 .h4 {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 3rem;
-        line-height: 3rem;
+    line-height: normal;
+    font-size: rem(24px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(28px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(32px);
     }
 }
 
 h5,
-.h5,
-.body-1,
-body {
-    font-size: 2.2rem;
-    line-height: 2.3rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 2.6rem;
-        line-height: 2.8rem;
+.h5{
+    font-size: rem(18px);
+    line-height: rem(26px);
+    font-weight: $font-weight-medium;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(20px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem(24px);
     }
 }
 
 h6,
 .h6 {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 2rem;
-        line-height: 2.4rem;
+    font-size: rem(16px);
+    line-height: rem(26px);
+    font-weight: $font-weight-bold;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(18px);
+    }
+}
+
+.body {
+    font-size: rem(16px);
+    line-height: rem(26px);
+    font-weight: $font-weight-normal;
+
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(18px);
+    }
+}
+
+.body-large {
+    font-size: rem(18px);
+    line-height: rem(26px);
+    font-weight: $font-weight-normal;
+
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(20px);
+        line-height: rem(30px);
+    }
+}
+
+.body-extra-large {
+    font-size: rem(20px);
+    line-height: rem(30px);
+    font-weight: $font-weight-normal;
+
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(22px);
+        line-height: 146%;
     }
 }
 
 .eyebrow {
-    font-size: 1.4rem;
-    line-height: 1;
-    &-1 {
-        @include media-breakpoint-up(md) {
-            font-size: 1.6rem;
-        }
-        @include media-breakpoint-up(xl) {
-            font-size: 2rem;
-        }
-    }
-}
-
-.quote {
-    &-1 {
-        font-size: 2.8rem;
-        line-height: 3.2rem;
-        @include media-breakpoint-up(xl) {
-            font-size: 3.6rem;
-            line-height: 4rem;
-        }
-    }
-}
-
-.button,
-.btn {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    @include media-breakpoint-up(xl) {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
+    font-size: rem(20px);
+    line-height: rem(26px);
+    font-weight: $font-weight-medium;
 }
 
 a {
     text-decoration: none;
-    @extend .transition-fast;
+    display: inline-flex;
+
+    &:hover {
+        font-weight: $font-weight-semibold;
+    }
 }
