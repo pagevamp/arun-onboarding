@@ -1,0 +1,86 @@
+
+.btn {
+    font-family: $btn-font-family;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: $font-weight-semibold;
+    color: $white;
+    text-align: center;
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: $btn-white-space;
+    vertical-align: middle;
+    cursor: if($enable-button-pointers, pointer, null);
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width solid transparent;
+    padding: rem(15px 40px);
+    @include transition($btn-transition);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        color: $white;
+        text-decoration: if($link-hover-decoration == underline, none, null);
+    }
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active {
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 40px;
+        background-color: var(--#{$prefix}btn-hover-bg);
+        transition: 0.3s ease-in-out all;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::after {
+            top: 0;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+}
+
+.btn-outline-primary {
+    border-color: $primary;
+    color: $primary;
+}
