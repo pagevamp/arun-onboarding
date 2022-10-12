@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @@include('includes/head.html',{'pageTitle':'FED Starter Kit'})
+        @@include('includes/head.html',{'pageTitle':'Arun Onboarding'})
     </head>
     <body>
         <div class="theme-app d-flex flex-column">
             <div class="theme-wrap position-relative">
-                @@include('includes/header.html', {
-                    'headerSkin': 'theme-header--dark'
-                })
+                <div class="leadspace-wrapper">
+                    @@include('includes/header.html')
+
+                    @@include('includes/modules/above-the-fold/leadspace-home.html')
+
+                    @@include('includes/modules/section/section-feature.html')
+                </div>
+
                 <main class="theme-main">
-
                     <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                Homepage Content Here
-                            </div>
-                        </div>
-                    </div>
+                        @@include('includes/modules/section/section-text-with-image.html', {
+                            'direction': 'flex-row',
+                            'image'    : 'block-img1.jpg',
+                            'title'    : 'Safe, Affordable, And Trusted',
+                            'para'     : 'Volunteer trail stewardship projects in America’s parks and forests designed specifically for college student groups and young professionals.',
+                            'count'    : '1',
+                            'ctaText'  : 'Contact Us'
+                        })
 
+                        @@include('includes/modules/section/section-text-with-image.html', {
+                            'direction': 'flex-row-reverse',
+                            'image'    : 'block-img2.jpg',
+                            'title'    : 'Enjoy Your Life With Us Now!',
+                            'para'     : 'Volunteer trail stewardship projects in America’s parks and forests designed specifically for college student groups and young professionals.',
+                            'count'    : '2',
+                            'ctaText'  : 'Contact Us'
+                        })
+
+                        @@include('includes/modules/section/section-text-with-image.html', {
+                            'direction': 'flex-row',
+                            'image'    : 'block-img3.jpg',
+                            'title'    : 'Let’s Enjoy Nature With Us',
+                            'para'     : 'Volunteer trail stewardship projects in America’s parks and forests designed specifically for college student groups and young professionals.',
+                            'count'    : '3',
+                            'ctaText'  : 'Learn More'
+                        })
+                    </div>
                 </main>
             </div>
+
             @@include('includes/footer.html')
             @@include('includes/scripts.html')
         </div>

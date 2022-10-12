@@ -1,0 +1,33 @@
+.offcanvas {
+    border-right: 0 !important;
+
+    @include media-breakpoint-down(lg) {
+        .offcanvas {
+            &-header, &-body {
+                padding-inline: 0;
+                padding-block: 32px;
+            }
+
+            &-header {
+                background-color: $light-purple;
+            }
+
+            &-body {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        .nav {
+            &-item {
+                padding-bottom: 2.5rem;
+            }
+
+            &-link {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
