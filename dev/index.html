@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @@include('includes/head.html',{'pageTitle':'FED Starter Kit'})
+        @@include('includes/head.html',{'pageTitle':'Arun Onboarding'})
     </head>
     <body>
         <div class="theme-app d-flex flex-column">
             <div class="theme-wrap position-relative">
-                @@include('includes/header.html', {
-                    'headerSkin': 'theme-header--dark'
-                })
-                <main class="theme-main">
+                <div class="leadspace-wrapper">
+                    @@include('includes/header.html')
+                </div>
 
+                <main class="theme-main">
                     <div class="container">
                         <div class="row">
                             <div class="col">
@@ -18,7 +18,6 @@
                             </div>
                         </div>
                     </div>
-
                 </main>
             </div>
             @@include('includes/footer.html')

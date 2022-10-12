@@ -1,5 +1,22 @@
-.#{$global} {
-    &-header {
-        background: $white;
+nav {
+    ul > li {
+        margin: 0;
+    }
+
+    .btn-close {
+        box-shadow: none !important;
+        border: 0;
+    }
+}
+
+.nav {
+    &-link {
+        padding-right: 0 !important;
+        padding-block: 0 !important;
+    }
+
+    &bar-toggler {
+        border: 0;
+        box-shadow: none !important;
     }
 }

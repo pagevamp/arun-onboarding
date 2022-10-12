@@ -1,5 +1,5 @@
 
-# FED Starter Kit
+# Arun Onboarding
 
 
 ## General info
@@ -28,7 +28,7 @@ Project is created with:
 * Live reload
 
 
-  
+
 
 ## Installation
 ```
@@ -63,7 +63,3 @@ src/js/index.js
 ```
 yarn build
 ```
-
-
-
-
