@@ -66,6 +66,7 @@ typings/
 .idea
 .DS_Store
 
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

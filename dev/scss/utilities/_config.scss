@@ -5,7 +5,7 @@ html {
 html,
 body {
     height: auto;
-    font-size: 10px;
+    font-size: 16px;
     position: relative;
     -webkit-overflow-scrolling: touch;
     // Makes the smooth scrolling on ios devices
@@ -14,8 +14,10 @@ body {
 body {
     letter-spacing: normal;
     @include font-smoothing(on);
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-family: $font-family-base;
+    font-weight: $font-weight-medium;
 
     &.prevent-scrolling {
         @extend .overflow-hidden, .position-fixed, .w-100;
@@ -42,10 +44,10 @@ button,
 }
 
 p {
-    margin-bottom: 3.2rem;
+    @extend .mb-0;
 
-    &:last-child {
-        @extend .mb-0;
+    & + p {
+        @extend .mt-4;
     }
 }
 
