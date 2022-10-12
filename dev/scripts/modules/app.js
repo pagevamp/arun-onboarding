@@ -1,6 +1,5 @@
 import 'popper.js';
 import 'bootstrap/js/dist/offcanvas';
-
 class global {
     constructor() {
         this.myModal = document.getElementById('exampleModal')
