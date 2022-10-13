@@ -6002,6 +6002,11 @@ jest-worker@^27.0.2:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
+jquery@>=1.7.2:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.1.tgz#fab0408f8b45fc19f956205773b62b292c147a16"
+  integrity sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==
+
 jquery@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
@@ -9086,6 +9091,13 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
+
+slick-carousel@1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.5.9.tgz#2bdcae38e7a58e72430e97055bfacc167f3364d3"
+  integrity sha512-qhvQPPxTjJk+2QUGVlk4kTQypb9M3wUw2UxWpedecZbby+fAP//yRMzsbx0D9oDWoH3HC+wPKTyFNauoCNdQ1w==
+  dependencies:
+    jquery ">=1.7.2"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
