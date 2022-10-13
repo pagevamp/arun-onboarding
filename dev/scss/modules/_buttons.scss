@@ -21,6 +21,14 @@
     position: relative;
     overflow: hidden;
 
+    @include media-breakpoint-down(lg) {
+        padding-inline: rem(32px);
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-inline: rem(28px);
+    }
+
     &:hover {
         color: $white;
         text-decoration: if($link-hover-decoration == underline, none, null);

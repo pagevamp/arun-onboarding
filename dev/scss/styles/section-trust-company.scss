@@ -1,0 +1,22 @@
+.section-trust-company {
+    padding-top: $spacer * 4;
+    padding-bottom: $spacer * 6.75;
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: $spacer * 5;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top: $spacer * 3;
+        padding-bottom: $spacer * 4;
+    }
+}
+
+.trust-list {
+    column-gap: $spacer * 6.25;
+    row-gap: $spacer * 4;
+
+    @include media-breakpoint-down(md) {
+        row-gap: $spacer * 3;
+    }
+}
