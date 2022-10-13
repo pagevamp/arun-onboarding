@@ -3,12 +3,16 @@
 .leadspace {
     padding: 100px 0;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
         padding: 60px 0;
     }
 
+    @include media-breakpoint-down(md) {
+        padding: 40px 0 60px;
+    }
+
     &-wrapper {
-        background-image: url('images/hero-bg.svg');
+        background-image: url('../../images/hero-bg.svg');
         background-repeat: no-repeat;
         background-position: top center;
         background-color: $light-purple;

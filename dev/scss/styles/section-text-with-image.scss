@@ -1,10 +1,19 @@
 @import "../common-imports";
 
 .section-text-with-image {
-    padding: 130px 0;
-    background-image: url("images/feature/feature-texture.svg");
+    margin: 130px 0;
+    background-image: url("../../images/feature/feature-texture.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include media-breakpoint-down(lg) {
+        margin: 90px 0
+    }
+
+    @include media-breakpoint-down(md) {
+        background-position: bottom;
+        margin: 60px 0
+    }
 
     .text-block {
         &__para {
@@ -14,6 +23,10 @@
 
             p {
                 max-width: 374px;
+
+                @include media-breakpoint-down(md) {
+                    max-width: 75%;
+                }
             }
 
             span {
@@ -23,12 +36,23 @@
                 padding-top: 10px;
                 position: relative;
                 top: 10px;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 190px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    font-size: 160px;
+                }
             }
         }
     }
 
     .image-block {
-        max-height: 662px;
         border-radius: 500px 0 500px 500px;
+
+        @include media-breakpoint-up(md) {
+            max-height: 662px;
+        }
     }
 }

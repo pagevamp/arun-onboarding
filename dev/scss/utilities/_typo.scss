@@ -42,7 +42,7 @@ h1,
     letter-spacing: .01em;
 
     @include media-breakpoint-up(md) {
-        font-size: rem(62px);
+        font-size: rem(52px);
         line-height: 126%;
     }
 
@@ -61,7 +61,7 @@ h2,
         font-size: rem(40px);
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         font-size: rem(62px);
         line-height: 126%;
     }
