@@ -1,5 +1,73 @@
+@import '../common-imports';
+
 .#{$global} {
     &-footer {
-        padding: rem(30px 0);
+        background-color: $light-purple;
+        padding-block: $spacer * 7.25 $spacer * 3;
+
+        @include media-breakpoint-down(lg) {
+            padding-block: $spacer * 5 $spacer * 3;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-block: $spacer * 3;
+        }
+
+        .footer {
+            &-main {
+                padding-bottom: $spacer * 8.25;
+
+                @include media-breakpoint-down(lg) {
+                    padding-bottom: $spacer * 5;
+                }
+
+                @include media-breakpoint-down(md) {
+                    padding-bottom: $spacer * 3;
+                }
+            }
+
+            &-desc {
+                max-width: 90%;
+            }
+
+            &-menu-section {
+                @include media-breakpoint-down(sm) {
+                    margin-top: $spacer * 3 !important;
+                }
+
+                p.body-large {
+                    line-height: 180%;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: $spacer * 1.25 !important;
+                    }
+                }
+
+                ul {
+                    padding: 0;
+
+                    li {
+                        margin-bottom: $spacer * 1.5;
+                        padding: 0;
+
+                        @include media-breakpoint-down(sm) {
+                            margin-bottom: $spacer * 1;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        a {
+                            line-height: 180%;
+
+                            &:hover {
+                                font-weight: $font-weight-medium;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
