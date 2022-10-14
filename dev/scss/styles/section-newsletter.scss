@@ -4,11 +4,11 @@
     padding-block: $spacer * 7.25 $spacer * 6;
 
     @include media-breakpoint-down(lg) {
-        padding-block: $spacer * 5 $spacer * 3;
+        padding-block: $spacer * 4 $spacer * 3;
     }
 
     @include media-breakpoint-down(md) {
-        padding-block: $spacer * 3;
+        padding-bottom: $spacer * 3;
     }
 
     .newsletter {

@@ -1,5 +1,5 @@
 
-# Arun Onboarding
+# Highking - Hiking & Outdoor Landing Page
 
 
 ## General info
