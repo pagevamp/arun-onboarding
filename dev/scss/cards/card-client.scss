@@ -4,7 +4,7 @@
         padding: $spacer * 3.25 $spacer * 3.5;
         box-shadow: 0px 54px 104px rgba(0, 0, 0, 0.04);
         border-radius: 140px 0;
-        background: $white url('../../images/card-texture.svg') no-repeat center center;
+        background: $white url('../images/card-texture.svg') no-repeat center center;
         background-size: cover;
 
         @include media-breakpoint-down(lg) {
