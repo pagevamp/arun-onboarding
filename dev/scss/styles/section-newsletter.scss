@@ -1,0 +1,44 @@
+@import '../common-imports';
+
+.section-newsletter {
+    padding-block: $spacer * 7.25 $spacer * 6;
+
+    @include media-breakpoint-down(lg) {
+        padding-block: $spacer * 5 $spacer * 3;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-block: $spacer * 3;
+    }
+
+    .newsletter {
+        &-form {
+            margin-top: $spacer * 4.75;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: $spacer * 3.5;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-top: $spacer * 3;
+            }
+
+            .row {
+                --hk-gutter-x: 20px;
+                --hk-gutter-y: 20px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .btn {
+                    width: 100%;
+
+                    span {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+    }
+}

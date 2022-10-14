@@ -1,0 +1,45 @@
+.form-control {
+    padding: rem(16px 24px);
+    border-radius: 50px;
+
+    &:focus, &:active {
+        box-shadow: none;
+        outline: none;
+    }
+
+    &--transparent {
+        background-color: transparent;
+
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    &--placeholder-primary {
+        &::placeholder {
+            color: $primary;
+        }
+    }
+}
+
+.form-group {
+    &--with-icon {
+        .form-control {
+            padding-left: 66px;
+        }
+    }
+
+    &--email {
+        position: relative;
+        &::before {
+            position: absolute;
+            left: 26px;
+            content: "\e90c";
+            font-family: $icomoon-font-family;
+            font-size: 23px;
+            color: $primary;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
